@@ -6,9 +6,9 @@ import pdb
 #Open and read the file
 print("Reading the data....")
 path = '/home/dl/Projects/SWAN/Data/'
-test_file_name = path + 'vela_small'
-file_name = path + 'ch00_B0833-45_20150612_191438_010_4'
-fh = np.loadtxt(file_name, delimiter=' ', usecols=1) #Real
+test_file_name = path + 'vela_small'	#Trail
+file_name = '/home/dl/Projects/SWAN/Programs/SWAN-git/tile_data/' + 'VELA07'	#Real
+fh = np.loadtxt(file_name, delimiter=' ', usecols=1) 
 print("Data successfuly loaded. Preparing for FFT....")
 # fh = fh1[:3584] #This was done to make len(fh)/512 an integer. Which is true for data
 pulm_fft = np.array_split(fh, len(fh)/512)

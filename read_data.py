@@ -1,4 +1,8 @@
 from binascii import hexlify
+import matplotlib.pyplot as plt
+
+def s8(value):
+	return -(value & 0x80) | (value & 0x7f)
 
 def process_header(header):
 	'''
@@ -46,9 +50,9 @@ def process_data(packet):
 	Y = []
 	for i in range(len(packet)):
 		if i%2 == 0:
-			X.append(packet[i])
+			X.append(s8(packet[i]))
 		else:
-			Y.append(packet[i])
+			Y.append(s8(packet[i]))
 	return X,Y
 
 
@@ -56,7 +60,9 @@ if __name__ == "__main__":
 	headers = []
 	x_pol = []
 	y_pol = []
-	with open('resized6', 'rb') as f:	#open resized1 file in read-binary format
+	path = path = '/home/dl/Projects/SWAN/Data/'
+	file_name = 'resized1_296'
+	with open(path + file_name, 'rb') as f:	#open resized1 file in read-binary format
 		while True:
 			header = f.read(32)
 			body = f.read(1024)
@@ -67,5 +73,6 @@ if __name__ == "__main__":
 				processed_packet = process_data(body)
 				x_pol.append(processed_packet[0])
 				y_pol.append(processed_packet[1])
+	
 	print(len(headers))
 	print('done!')
