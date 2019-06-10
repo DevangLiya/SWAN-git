@@ -1,5 +1,4 @@
 from binascii import hexlify
-import matplotlib.pyplot as plt
 
 def s8(value):
 	return -(value & 0x80) | (value & 0x7f)

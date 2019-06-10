@@ -35,12 +35,12 @@ f.close()
 print("Performing FFT....")
 ffted = []
 N = 512
-for packet in y_pol:	#Change here for X/Y
+for packet in y_pol:	#Change here for X/Y (3/4)
 	yr = fft(packet) 	#"raw" FFT with both + and - frequencies
 	temp = pow(2/N * np.abs(yr[0:np.int(N/2)]), 2)	#positive frequencies only
 	ffted.append(temp)
 
-del y_pol	#Change here for X/Y
+del y_pol	#Change here for X/Y (4/4)
 
 #Stacking function
 def stacking(packets):
