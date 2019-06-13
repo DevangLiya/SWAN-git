@@ -1,13 +1,13 @@
 import read_data as RD
 
 #Create 7 files for 7 tiles
-fh1 = open('tile_data/VELA01', 'w')
-fh2 = open('tile_data/VELA02', 'w')
-fh3 = open('tile_data/VELA03', 'w')
-fh4 = open('tile_data/VELA04', 'w')
-fh5 = open('tile_data/VELA05', 'w')
-fh6 = open('tile_data/VELA06', 'w')
-fh7 = open('tile_data/VELA07', 'w')
+fh1 = open('processed_data/VELA01', 'w')
+fh2 = open('processed_data/VELA02', 'w')
+fh3 = open('processed_data/VELA03', 'w')
+fh4 = open('processed_data/VELA04', 'w')
+fh5 = open('processed_data/VELA05', 'w')
+fh6 = open('processed_data/VELA06', 'w')
+fh7 = open('processed_data/VELA07', 'w')
 
 path = path = 'raw_data/'
 file_name = 'ch00_VELA_IISER_20190523_171203_000.mbr'

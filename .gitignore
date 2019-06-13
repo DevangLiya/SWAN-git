@@ -3,3 +3,7 @@
 
 #python junk
 /__pycache__/
+
+#These directories were added just to establish the directory structure
+/raw_data/
+/processed_data/

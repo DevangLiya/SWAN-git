@@ -20,7 +20,10 @@ I have taken every step in my control to make these programs as readable as I ca
 Feel free to ask questions (or raise an issue) about these programs if it's not clear even after reading the documentation. If you come to me without reading the documentation then I might tell you to go [RTFM](https://www.urbandictionary.com/define.php?term=RTFM).
 
 Oh, and here's a playful Golden Retriever puppy wanting to hug you and wish you a great day!
-![https://www.flickr.com/photos/138248475@N03/23930735040](good_day.jpg)
+
+<div align="center">
+<img src="good_day.jpg" alt="https://www.flickr.com/photos/138248475@N03/23930735040" width="50%" />
+</div>
 
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)

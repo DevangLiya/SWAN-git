@@ -6,7 +6,7 @@ import pdb
 #Open and read the file
 path = 'raw_data/'
 test_file_name = path + 'vela_small'
-file_name = 'tile_data/' + 'VELA07'
+file_name = 'processed_data/' + 'VELA07'
 print("Reading the data....")
 fh = np.loadtxt(file_name, delimiter=' ', usecols=1) 
 print("Data successfuly loaded. Preparing for FFT....")
