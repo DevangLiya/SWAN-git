@@ -1,2 +1,5 @@
 #Local analysis files
 /tile_data/
+
+#python junk
+/__pycache__/

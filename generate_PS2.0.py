@@ -1,3 +1,5 @@
+#THIS PROGRAM SHOULD NOT BE USED ANYMORE. It is replaced by read_save_data.py and vela.py
+
 #v2.0
 #This version reads the mbr file and plots power spectrum.
 #The spectrum is plotted without any cleaning of data.
@@ -16,7 +18,7 @@ from scipy.fftpack import fft
 #Read data and generate X, Y packets for FFT
 # x_pol = []	#Toggle here for X
 y_pol = []	#Toggle here for Y
-file_path = '/home/dl/Projects/SWAN/Data/'
+file_path = 'raw_data/'
 f_name = file_path + 'short'
 print("Reading data....")
 with open(f_name, 'rb') as f:	#open f_name in read-binary format

@@ -1,15 +1,15 @@
 import read_data as RD
 
 #Create 7 files for 7 tiles
-fh1 = open('/home/dl/Projects/SWAN/Programs/SWAN-git/tile_data/VELA01', 'w')
-fh2 = open('/home/dl/Projects/SWAN/Programs/SWAN-git/tile_data/VELA02', 'w')
-fh3 = open('/home/dl/Projects/SWAN/Programs/SWAN-git/tile_data/VELA03', 'w')
-fh4 = open('/home/dl/Projects/SWAN/Programs/SWAN-git/tile_data/VELA04', 'w')
-fh5 = open('/home/dl/Projects/SWAN/Programs/SWAN-git/tile_data/VELA05', 'w')
-fh6 = open('/home/dl/Projects/SWAN/Programs/SWAN-git/tile_data/VELA06', 'w')
-fh7 = open('/home/dl/Projects/SWAN/Programs/SWAN-git/tile_data/VELA07', 'w')
+fh1 = open('tile_data/VELA01', 'w')
+fh2 = open('tile_data/VELA02', 'w')
+fh3 = open('tile_data/VELA03', 'w')
+fh4 = open('tile_data/VELA04', 'w')
+fh5 = open('tile_data/VELA05', 'w')
+fh6 = open('tile_data/VELA06', 'w')
+fh7 = open('tile_data/VELA07', 'w')
 
-path = path = '/home/dl/Projects/SWAN/Data/'
+path = path = 'raw_data/'
 file_name = 'ch00_VELA_IISER_20190523_171203_000.mbr'
 i = 0
 with open(path + file_name, 'rb') as f:	#open resized1 file in read-binary format

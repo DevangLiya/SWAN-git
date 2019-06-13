@@ -1,6 +1,17 @@
 from binascii import hexlify
 
 def s8(value):
+	'''
+	A function to take 8-bit 2's complement
+
+	Input:
+	------
+	8-bit binary string
+
+	Output:
+	------
+	An integer between -128 and 127
+	'''
 	return -(value & 0x80) | (value & 0x7f)
 
 def process_header(header):
@@ -59,9 +70,9 @@ if __name__ == "__main__":
 	headers = []
 	x_pol = []
 	y_pol = []
-	path = path = '/home/dl/Projects/SWAN/Data/'
+	path = 'raw_data/'
 	file_name = 'resized1_296'
-	with open(path + file_name, 'rb') as f:	#open resized1 file in read-binary format
+	with open(path + file_name, 'rb') as f:	#open file in read-binary format
 		while True:
 			header = f.read(32)
 			body = f.read(1024)
@@ -73,5 +84,6 @@ if __name__ == "__main__":
 				x_pol.append(processed_packet[0])
 				y_pol.append(processed_packet[1])
 	
+	f.close()
 	print(len(headers))
 	print('done!')
