@@ -1,0 +1,2 @@
+All the raw data should be stored in this directory. 
+This will mostly be .mbr files.
