@@ -1,0 +1,2 @@
+Processed data is stored here. 
+This will mostly be the tile-wise polarization in ASCII format and FITS.
