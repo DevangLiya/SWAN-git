@@ -4,11 +4,11 @@ from scipy.fftpack import fft
 import pdb
 
 #Open and read the file
-path = 'raw_data/'
-test_file_name = path + 'vela_small'
+path = '/home/dl/Projects/SWAN/Data/'
+test_file_name = path + 'ch00_B0833-45_20150612_191438_010_4'
 file_name = 'processed_data/' + 'VELA07'
 print("Reading the data....")
-fh = np.loadtxt(file_name, delimiter=' ', usecols=1) 
+fh = np.loadtxt(test_file_name, delimiter=' ', usecols=1) 
 print("Data successfuly loaded. Preparing for FFT....")
 # fh = fh1[:3584] #This was done to make len(fh)/512 an integer. Which is true for data
 pulm_fft = np.array_split(fh, len(fh)/512)
@@ -31,12 +31,15 @@ def stacking(packets):
 
 #Stacking
 print("Stacking the images....")
-pulm_PS = []
-for i in range(0, len(ffted), 60):
-	pulm_PS.append(stacking(ffted[i:i+60])/60.0)
+pulm_PS = np.array([stacking(ffted[:60])/60.0])	#List of 256-length arrays
+for i in range(60, len(ffted), 60):
+	pulm_PS = np.vstack((pulm_PS, stacking(ffted[i:i+60])/60.0))
 
 
-#Compare power spectrums
+#Convert to channel-wise array
+pulm_PS2 = pulm_PS.T 
+
+#Compare power spectrums (Cluttered code here)
 # plt.plot(pow(pulm_PS[0],2), color='blue', label='Stacked (60)')
 # for i in range(60):
 # 	plt.plot(pow(ffted[i], 2), color='red', alpha=0.2)
@@ -51,8 +54,6 @@ for i in range(0, len(ffted), 60):
 # 	plt.clf()
 # plt.legend(loc='upper right')
 # plt.show()
-
-pulm_PS2 = list(zip(*pulm_PS))	#Transpose
 
 #Plot dynamic spectrum
 print("Generating the dynamic spectrum....")

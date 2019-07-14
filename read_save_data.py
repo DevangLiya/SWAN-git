@@ -1,13 +1,14 @@
 import read_data as RD
 
-#Create 7 files for 7 tiles
-fh1 = open('processed_data/VELA01', 'w')
-fh2 = open('processed_data/VELA02', 'w')
-fh3 = open('processed_data/VELA03', 'w')
-fh4 = open('processed_data/VELA04', 'w')
-fh5 = open('processed_data/VELA05', 'w')
-fh6 = open('processed_data/VELA06', 'w')
-fh7 = open('processed_data/VELA07', 'w')
+#Create 8 files for 8 DSPs
+fh1 = open('processed_data/DSP01', 'w')
+fh2 = open('processed_data/DSP02', 'w')
+fh3 = open('processed_data/DSP03', 'w')
+fh4 = open('processed_data/DSP04', 'w')
+fh5 = open('processed_data/DSP05', 'w')
+fh6 = open('processed_data/DSP06', 'w')
+fh7 = open('processed_data/DSP07', 'w')
+fh8 = open('processed_data/DSP08', 'w')
 
 path = path = 'raw_data/'
 file_name = 'ch00_VELA_IISER_20190523_171203_000.mbr'
@@ -43,6 +44,9 @@ with open(path + file_name, 'rb') as f:	#open resized1 file in read-binary forma
 			if tile == '07':
 				for x, y in zip(processed_packet[0], processed_packet[1]) :
 					fh7.write(str(x) + ' ' + str(y) + '\n')
+			if tile == '08':
+				for x, y in zip(processed_packet[0], processed_packet[1]) :
+					fh8.write(str(x) + ' ' + str(y) + '\n')
 		if i%50000 == 0: print("On packet number", i)
 			
 f.close()
@@ -53,5 +57,6 @@ fh4.close()
 fh5.close()
 fh6.close()
 fh7.close()
+fh8.close()
 
 print('done!')

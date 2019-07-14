@@ -10,7 +10,7 @@ Personal programs for SWAN Imaging Challenge 2019
 
 * __read_save_data.py__: Creates a new file for each tile and saves the polarization data for respective tile in the form of X, Y columns separated by single space. Takes .mbr file as input.
 
-* __vela<span>.py</span>__: Generates dynamic spectrum starting from a file where X and Y polarizations are arranged in columns separated by a single space. The program also contains code to plot and compare power spectrum (commented out). However, it is up to the user to modify the program suitable to their needs. This program can be used directly after executing read_save_data.py.
+* __spectrums<span>.py</span>__: Generates dynamic spectrum starting from a file where X and Y polarizations are arranged in columns separated by a single space. The program also contains code to plot and compare power spectrum (commented out). However, it is up to the user to modify the program suitable to their needs. This program can be used directly after executing read_save_data.py.
 
 * __generate_PS2.0.py__: Generates dynamic spectrum starting from an .mbr file. This is a legacy code and it is uploaded here just for the sake of completeness. THIS PROGRAM SHOULD NOT BE USED ANYMORE.
 
